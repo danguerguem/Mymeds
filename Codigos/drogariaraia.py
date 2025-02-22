@@ -48,7 +48,7 @@ def run():
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
         })
         page.goto(base_url, wait_until="networkidle", timeout=120000)  # Espera até que a rede esteja ociosa
-
+ 
         produtos_coletados = []
 
         while True:
