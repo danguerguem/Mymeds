@@ -1,4 +1,3 @@
-﻿
 name: Executar Script Agendado
 
 on:
@@ -12,7 +11,10 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
-      
+
+      - name: Verificar estrutura de diretórios
+        run: ls -R
+
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
@@ -20,13 +22,12 @@ jobs:
 
       - name: Instalar dependências
         run: pip install -r requirements.txt
-      
+
       - name: Install Playwright browsers
         run: playwright install --with-deps
 
       - name: Install Playwright browsers (Chromium)
         run: playwright install chromium
 
-
       - name: Executar script
-        run: python Codigos/drogariaraia.py
+        run: python codigos/drogariaraia.py
