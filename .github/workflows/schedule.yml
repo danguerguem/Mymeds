@@ -30,4 +30,5 @@ jobs:
         run: playwright install chromium
 
       - name: Executar script
-        run: python /home/runner/work/Mymeds/codigos/drogariaraia.py
+        run: python ./codigos/drogariaraia.py
+
