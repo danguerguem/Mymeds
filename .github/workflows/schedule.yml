@@ -32,6 +32,6 @@ jobs:
         run: playwright install chromium
 
       - name: Executar script
-        run: python $GITHUB_WORKSPACE/codigos/drogariaraia.py
+        run: python $GITHUB_WORKSPACE/Codigos/drogariaraia.py
 
 
