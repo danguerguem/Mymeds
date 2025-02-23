@@ -32,7 +32,7 @@ def run():
 
         while True:
             product_selector = ".product-item"
-            page.wait_for_selector(product_selector, timeout=10000)
+            page.wait_for_selector(product_selector, timeout=30000)
 
             products = page.locator(product_selector)
             if products.count() == 0:
