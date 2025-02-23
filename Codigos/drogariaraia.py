@@ -26,7 +26,7 @@ def run():
         page = browser.new_page()
 
         base_url = "https://www.drogaraia.com.br/medicamentos/remedios.html"
-        page.goto(base_url, wait_until="networkidle", timeout=120000)  # Espera até que a rede esteja ociosa
+        page.wait_for_load_state("networkidle")  # Espera até que não haja mais requisições de rede
         
         produtos_coletados = []
 
